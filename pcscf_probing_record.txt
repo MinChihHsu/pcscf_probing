@@ -1,0 +1,601 @@
+[INFO] src IPv6 (getifaddrs): 2402:7500:725:165f::77de:1e68
+
+=== Probing P-CSCF: 2402:7500:1:8e02::1:2103 ===
+
+[Phase 1] TCP SYN TTL sweep toward 2402:7500:1:8e02::1:2103 (IPv6)
+[Phase 1] TTL= 1  SYN sent  src_port=46625
+[Phase 1] TTL= 2  SYN sent  src_port=41753
+[Phase 1] TTL= 2  ICMP6 Time-Exceeded from 2402:7500:0:8031:1::2
+[Phase 1] TTL= 3  SYN sent  src_port=34501
+[Phase 1] TTL= 3  ICMP6 Time-Exceeded from 2402:7500:1:8e01::1a
+[Phase 1] TTL= 4  SYN sent  src_port=35161
+[Phase 1] TTL= 4  *** SYN-ACK received! hop_count=4 ***
+
+========== Phase 1 Summary ==========
+  hop_count (SYN-ACK TTL)          : 4
+  TCP SYN TTLs that got ICMP exceed : 2, 3
+  TCP max hop before target         : 3
+==========
+
+[Phase 2] UDP TTL sweep TTL=1..3 toward 2402:7500:1:8e02::1:2103 (IPv6)
+[Phase 2] TTL= 1  UDP sent  src_port=47475  payload="udp_probing_sweep_ttl_1"
+[Phase 2] TTL= 1  no ICMP response
+[Phase 2] TTL= 2  UDP sent  src_port=56990  payload="udp_probing_sweep_ttl_2"
+[Phase 2] TTL= 2  ICMP6 Time-Exceeded from 2402:7500:0:8031:1::2  ✓
+[Phase 2] TTL= 3  UDP sent  src_port=54438  payload="udp_probing_sweep_ttl_3"
+[Phase 2] TTL= 3  ICMP6 Time-Exceeded from 2402:7500:1:8e01::12  ✓
+
+========== Phase 2 Summary ==========
+  UDP max hop before target (burst TTL): 3
+==========
+
+========== Combined Summary for 2402:7500:1:8e02::1:2103 ==========
+  [TCP] max responding hop before target : 3
+  [UDP] max responding hop before target : 3
+==========
+
+[Phase 2] Burst: 50 UDP pkts @ TTL=3 — sender+receiver pthreads
+          Rate: 50 pps (20000 µs interval)  payload=46 B UDP / ~94 B IPv6
+[Burst] # 1/50  TTL=3  sport=42804  sent  seq=1  size=46 B
+[Burst] # 2/50  TTL=3  sport=52834  sent  seq=2  size=46 B
+[Burst] # 1/50  RTT=27.781 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] # 2/50  RTT=24.233 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] # 3/50  TTL=3  sport=44999  sent  seq=3  size=46 B
+[Burst] # 4/50  TTL=3  sport=46282  sent  seq=4  size=46 B
+[Burst] # 3/50  RTT=30.145 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] # 5/50  TTL=3  sport=50000  sent  seq=5  size=46 B
+[Burst] # 4/50  RTT=27.093 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] # 6/50  TTL=3  sport=43633  sent  seq=6  size=46 B
+[Burst] # 5/50  RTT=24.424 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] # 7/50  TTL=3  sport=35394  sent  seq=7  size=46 B
+[Burst] # 6/50  RTT=28.243 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] # 8/50  TTL=3  sport=56782  sent  seq=8  size=46 B
+[Burst] # 7/50  RTT=26.817 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] # 8/50  RTT=21.167 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] # 9/50  TTL=3  sport=45683  sent  seq=9  size=46 B
+[Burst] #10/50  TTL=3  sport=49751  sent  seq=10  size=46 B
+[Burst] # 9/50  RTT=28.365 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] #10/50  RTT=22.752 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #11/50  TTL=3  sport=33254  sent  seq=11  size=46 B
+[Burst] #12/50  TTL=3  sport=60859  sent  seq=12  size=46 B
+[Burst] #11/50  RTT=25.767 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #12/50  RTT=21.367 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #13/50  TTL=3  sport=57939  sent  seq=13  size=46 B
+[Burst] #14/50  TTL=3  sport=48700  sent  seq=14  size=46 B
+[Burst] #13/50  RTT=27.526 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #14/50  RTT=23.561 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] #15/50  TTL=3  sport=57107  sent  seq=15  size=46 B
+[Burst] #16/50  TTL=3  sport=47422  sent  seq=16  size=46 B
+[Burst] #15/50  RTT=32.363 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] #17/50  TTL=3  sport=49784  sent  seq=17  size=46 B
+[Burst] #16/50  RTT=26.694 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] #17/50  RTT=21.730 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] #18/50  TTL=3  sport=48292  sent  seq=18  size=46 B
+[Burst] #19/50  TTL=3  sport=32860  sent  seq=19  size=46 B
+[Burst] #18/50  RTT=28.272 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] #20/50  TTL=3  sport=50989  sent  seq=20  size=46 B
+[Burst] #19/50  RTT=25.586 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #20/50  RTT=22.519 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #21/50  TTL=3  sport=46692  sent  seq=21  size=46 B
+[Burst] #22/50  TTL=3  sport=58133  sent  seq=22  size=46 B
+[Burst] #21/50  RTT=26.554 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #22/50  RTT=23.489 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] #23/50  TTL=3  sport=34486  sent  seq=23  size=46 B
+[Burst] #24/50  TTL=3  sport=51687  sent  seq=24  size=46 B
+[Burst] #23/50  RTT=31.177 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #24/50  RTT=26.439 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] #25/50  TTL=3  sport=39827  sent  seq=25  size=46 B
+[Burst] #26/50  TTL=3  sport=49785  sent  seq=26  size=46 B
+[Burst] #25/50  RTT=30.070 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] #27/50  TTL=3  sport=58134  sent  seq=27  size=46 B
+[Burst] #26/50  RTT=24.441 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #27/50  RTT=22.445 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #28/50  TTL=3  sport=55233  sent  seq=28  size=46 B
+[Burst] #29/50  TTL=3  sport=42453  sent  seq=29  size=46 B
+[Burst] #28/50  RTT=27.751 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] #30/50  TTL=3  sport=47471  sent  seq=30  size=46 B
+[Burst] #29/50  RTT=23.296 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] #31/50  TTL=3  sport=58042  sent  seq=31  size=46 B
+[Burst] #30/50  RTT=29.309 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] #32/50  TTL=3  sport=43943  sent  seq=32  size=46 B
+[Burst] #31/50  RTT=27.273 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] #32/50  RTT=24.542 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] #33/50  TTL=3  sport=53298  sent  seq=33  size=46 B
+[Burst] #34/50  TTL=3  sport=43308  sent  seq=34  size=46 B
+[Burst] #33/50  RTT=29.525 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #34/50  RTT=23.917 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #35/50  TTL=3  sport=38213  sent  seq=35  size=46 B
+[Burst] #36/50  TTL=3  sport=56955  sent  seq=36  size=46 B
+[Burst] #35/50  RTT=29.165 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #37/50  TTL=3  sport=36223  sent  seq=37  size=46 B
+[Burst] #36/50  RTT=29.740 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] #37/50  RTT=22.335 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] #38/50  TTL=3  sport=45983  sent  seq=38  size=46 B
+[Burst] #39/50  TTL=3  sport=34342  sent  seq=39  size=46 B
+[Burst] #38/50  RTT=27.228 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #39/50  RTT=24.677 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] #40/50  TTL=3  sport=36637  sent  seq=40  size=46 B
+[Burst] #41/50  TTL=3  sport=47644  sent  seq=41  size=46 B
+[Burst] #40/50  RTT=31.666 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] #41/50  RTT=23.058 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #42/50  TTL=3  sport=51011  sent  seq=42  size=46 B
+[Burst] #43/50  TTL=3  sport=46682  sent  seq=43  size=46 B
+[Burst] #42/50  RTT=25.545 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] #43/50  RTT=22.979 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #44/50  TTL=3  sport=39827  sent  seq=44  size=46 B
+[Burst] #45/50  TTL=3  sport=48830  sent  seq=45  size=46 B
+[Burst] #44/50  RTT=28.571 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #45/50  RTT=25.515 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #46/50  TTL=3  sport=53297  sent  seq=46  size=46 B
+[Burst] #47/50  TTL=3  sport=48696  sent  seq=47  size=46 B
+[Burst] #46/50  RTT=32.377 ms  from 2402:7500:1:8e01::1a  ✓
+[Burst] #48/50  TTL=3  sport=51535  sent  seq=48  size=46 B
+[Burst] #47/50  RTT=26.975 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #48/50  RTT=23.144 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #49/50  TTL=3  sport=51124  sent  seq=49  size=46 B
+[Burst] #50/50  TTL=3  sport=57300  sent  seq=50  size=46 B
+[Burst] #49/50  RTT=30.399 ms  from 2402:7500:1:8e01::12  ✓
+[Burst] #50/50  RTT=26.711 ms  from 2402:7500:1:8e01::1a  ✓
+
+========== Burst RTT & Packet Loss Summary ==========
+  Burst TTL               : 3
+  Packets sent            : 50
+  Packets received (ICMP) : 50
+  Packet loss             : 0/50  (0.0%)
+  RTT min                 : 21.167 ms
+  RTT avg                 : 26.334 ms
+  RTT max                 : 32.377 ms
+  Jitter (mean |delta|)   : 4.634 ms
+==========
+[INFO] src IPv6 (getifaddrs): 2402:7500:725:165f::77de:1e68
+
+=== Probing P-CSCF: 2402:7500:1:6e02::1:2103 ===
+
+[Phase 1] TCP SYN TTL sweep toward 2402:7500:1:6e02::1:2103 (IPv6)
+[Phase 1] TTL= 1  SYN sent  src_port=35719
+[Phase 1] TTL= 2  SYN sent  src_port=54121
+[Phase 1] TTL= 2  ICMP6 Time-Exceeded from 2402:7500:0:8031:2::2
+[Phase 1] TTL= 3  SYN sent  src_port=36443
+[Phase 1] TTL= 3  ICMP6 Time-Exceeded from 2402:7500:1:8e01::1e
+[Phase 1] TTL= 4  SYN sent  src_port=35693
+[Phase 1] TTL= 4  ICMP6 Time-Exceeded from 2402:7500:1:6e01::f6
+[Phase 1] TTL= 5  SYN sent  src_port=39377
+[Phase 1] TTL= 5  *** SYN-ACK received! hop_count=5 ***
+
+========== Phase 1 Summary ==========
+  hop_count (SYN-ACK TTL)          : 5
+  TCP SYN TTLs that got ICMP exceed : 2, 3, 4
+  TCP max hop before target         : 4
+==========
+
+[Phase 2] UDP TTL sweep TTL=1..4 toward 2402:7500:1:6e02::1:2103 (IPv6)
+[Phase 2] TTL= 1  UDP sent  src_port=53760  payload="udp_probing_sweep_ttl_1"
+[Phase 2] TTL= 1  no ICMP response
+[Phase 2] TTL= 2  UDP sent  src_port=58435  payload="udp_probing_sweep_ttl_2"
+[Phase 2] TTL= 2  ICMP6 Time-Exceeded from 2402:7500:0:8031:2::2  ✓
+[Phase 2] TTL= 3  UDP sent  src_port=52559  payload="udp_probing_sweep_ttl_3"
+[Phase 2] TTL= 3  ICMP6 Time-Exceeded from 2402:7500:1:8e01::16  ✓
+[Phase 2] TTL= 4  UDP sent  src_port=44971  payload="udp_probing_sweep_ttl_4"
+[Phase 2] TTL= 4  ICMP6 Time-Exceeded from 2402:7500:1:6e01::f6  ✓
+
+========== Phase 2 Summary ==========
+  UDP max hop before target (burst TTL): 4
+==========
+
+========== Combined Summary for 2402:7500:1:6e02::1:2103 ==========
+  [TCP] max responding hop before target : 4
+  [UDP] max responding hop before target : 4
+==========
+
+[Phase 2] Burst: 50 UDP pkts @ TTL=4 — sender+receiver pthreads
+          Rate: 50 pps (20000 µs interval)  payload=46 B UDP / ~94 B IPv6
+[Burst] # 1/50  TTL=4  sport=48776  sent  seq=1  size=46 B
+[Burst] # 1/50  RTT=16.991 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] # 2/50  TTL=4  sport=36876  sent  seq=2  size=46 B
+[Burst] # 3/50  TTL=4  sport=59435  sent  seq=3  size=46 B
+[Burst] # 2/50  RTT=31.654 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] # 4/50  TTL=4  sport=41993  sent  seq=4  size=46 B
+[Burst] # 3/50  RTT=27.625 ms  from 2402:7500:1:6e01::f6  ✓
+[Burst] # 5/50  TTL=4  sport=48430  sent  seq=5  size=46 B
+[Burst] # 4/50  RTT=23.785 ms  from 2402:7500:1:6e01::f6  ✓
+[Burst] # 6/50  TTL=4  sport=39621  sent  seq=6  size=46 B
+[Burst] # 5/50  RTT=28.872 ms  from 2402:7500:1:6e01::f6  ✓
+[Burst] # 7/50  TTL=4  sport=42607  sent  seq=7  size=46 B
+[Burst] # 6/50  RTT=26.336 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] # 7/50  RTT=22.280 ms  from 2402:7500:1:6e01::f6  ✓
+[Burst] # 8/50  TTL=4  sport=32994  sent  seq=8  size=46 B
+[Burst] # 9/50  TTL=4  sport=36092  sent  seq=9  size=46 B
+[Burst] # 8/50  RTT=28.360 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #10/50  TTL=4  sport=57779  sent  seq=10  size=46 B
+[Burst] # 9/50  RTT=31.321 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #11/50  TTL=4  sport=35733  sent  seq=11  size=46 B
+[Burst] #10/50  RTT=27.171 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #12/50  TTL=4  sport=58485  sent  seq=12  size=46 B
+[Burst] #11/50  RTT=25.087 ms  from 2402:7500:1:6e01::f6  ✓
+[Burst] #13/50  TTL=4  sport=46000  sent  seq=13  size=46 B
+[Burst] #12/50  RTT=31.902 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #14/50  TTL=4  sport=38768  sent  seq=14  size=46 B
+[Burst] #13/50  RTT=29.325 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #15/50  TTL=4  sport=36784  sent  seq=15  size=46 B
+[Burst] #14/50  RTT=24.288 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #15/50  RTT=20.971 ms  from 2402:7500:1:6e01::f6  ✓
+[Burst] #16/50  TTL=4  sport=52151  sent  seq=16  size=46 B
+[Burst] #17/50  TTL=4  sport=44223  sent  seq=17  size=46 B
+[Burst] #16/50  RTT=24.867 ms  from 2402:7500:1:6e01::f6  ✓
+[Burst] #18/50  TTL=4  sport=59763  sent  seq=18  size=46 B
+[Burst] #17/50  RTT=27.358 ms  from 2402:7500:1:6e01::f6  ✓
+[Burst] #18/50  RTT=21.728 ms  from 2402:7500:1:6e01::f6  ✓
+[Burst] #19/50  TTL=4  sport=39360  sent  seq=19  size=46 B
+[Burst] #20/50  TTL=4  sport=41743  sent  seq=20  size=46 B
+[Burst] #19/50  RTT=27.567 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #20/50  RTT=23.399 ms  from 2402:7500:1:6e01::f6  ✓
+[Burst] #21/50  TTL=4  sport=60788  sent  seq=21  size=46 B
+[Burst] #21/50  RTT=20.019 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #22/50  TTL=4  sport=43828  sent  seq=22  size=46 B
+[Burst] #23/50  TTL=4  sport=44099  sent  seq=23  size=46 B
+[Burst] #22/50  RTT=24.482 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #24/50  TTL=4  sport=50793  sent  seq=24  size=46 B
+[Burst] #23/50  RTT=29.702 ms  from 2402:7500:1:6e01::f6  ✓
+[Burst] #25/50  TTL=4  sport=42260  sent  seq=25  size=46 B
+[Burst] #24/50  RTT=26.542 ms  from 2402:7500:1:6e01::f6  ✓
+[Burst] #25/50  RTT=23.843 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #26/50  TTL=4  sport=55340  sent  seq=26  size=46 B
+[Burst] #26/50  RTT=19.551 ms  from 2402:7500:1:6e01::f6  ✓
+[Burst] #27/50  TTL=4  sport=35107  sent  seq=27  size=46 B
+[Burst] #28/50  TTL=4  sport=54807  sent  seq=28  size=46 B
+[Burst] #27/50  RTT=24.860 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #28/50  RTT=21.740 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #29/50  TTL=4  sport=48991  sent  seq=29  size=46 B
+[Burst] #30/50  TTL=4  sport=41416  sent  seq=30  size=46 B
+[Burst] #29/50  RTT=26.584 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #31/50  TTL=4  sport=33470  sent  seq=31  size=46 B
+[Burst] #30/50  RTT=31.607 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #31/50  RTT=17.846 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #32/50  TTL=4  sport=57952  sent  seq=32  size=46 B
+[Burst] #33/50  TTL=4  sport=43731  sent  seq=33  size=46 B
+[Burst] #32/50  RTT=24.676 ms  from 2402:7500:1:6e01::f6  ✓
+[Burst] #34/50  TTL=4  sport=52412  sent  seq=34  size=46 B
+[Burst] #33/50  RTT=38.872 ms  from 2402:7500:1:6e01::f6  ✓
+[Burst] #35/50  TTL=4  sport=52127  sent  seq=35  size=46 B
+[Burst] #34/50  RTT=27.921 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #35/50  RTT=25.195 ms  from 2402:7500:1:6e01::f6  ✓
+[Burst] #36/50  TTL=4  sport=54438  sent  seq=36  size=46 B
+[Burst] #36/50  RTT=19.698 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #37/50  TTL=4  sport=59121  sent  seq=37  size=46 B
+[Burst] #38/50  TTL=4  sport=53194  sent  seq=38  size=46 B
+[Burst] #37/50  RTT=25.199 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #38/50  RTT=20.936 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #39/50  TTL=4  sport=42345  sent  seq=39  size=46 B
+[Burst] #40/50  TTL=4  sport=35234  sent  seq=40  size=46 B
+[Burst] #39/50  RTT=28.631 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #40/50  RTT=23.570 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #41/50  TTL=4  sport=59521  sent  seq=41  size=46 B
+[Burst] #41/50  RTT=21.146 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #42/50  TTL=4  sport=37979  sent  seq=42  size=46 B
+[Burst] #42/50  RTT=23.139 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #43/50  TTL=4  sport=51988  sent  seq=43  size=46 B
+[Burst] #44/50  TTL=4  sport=50431  sent  seq=44  size=46 B
+[Burst] #43/50  RTT=42.249 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #45/50  TTL=4  sport=42926  sent  seq=45  size=46 B
+[Burst] #44/50  RTT=24.836 ms  from 2402:7500:1:6e01::f6  ✓
+[Burst] #45/50  RTT=22.167 ms  from 2402:7500:1:6e01::f6  ✓
+[Burst] #46/50  TTL=4  sport=52060  sent  seq=46  size=46 B
+[Burst] #46/50  RTT=23.071 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #47/50  TTL=4  sport=48824  sent  seq=47  size=46 B
+[Burst] #48/50  TTL=4  sport=55602  sent  seq=48  size=46 B
+[Burst] #47/50  RTT=27.362 ms  from 2402:7500:1:6e01::f6  ✓
+[Burst] #48/50  RTT=23.781 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #49/50  TTL=4  sport=33083  sent  seq=49  size=46 B
+[Burst] #50/50  TTL=4  sport=33285  sent  seq=50  size=46 B
+[Burst] #49/50  RTT=29.790 ms  from 2402:7500:1:6e01::fe  ✓
+[Burst] #50/50  RTT=26.437 ms  from 2402:7500:1:6e01::fe  ✓
+
+========== Burst RTT & Packet Loss Summary ==========
+  Burst TTL               : 4
+  Packets sent            : 50
+  Packets received (ICMP) : 50
+  Packet loss             : 0/50  (0.0%)
+  RTT min                 : 16.991 ms
+  RTT avg                 : 25.727 ms
+  RTT max                 : 42.249 ms
+  Jitter (mean |delta|)   : 5.490 ms
+==========
+[INFO] src IPv4 (getifaddrs): 7.34.96.140
+
+=== Probing P-CSCF: 10.48.140.35 ===
+
+[Phase 1] TCP SYN TTL sweep toward 10.48.140.35 (IPv4)
+[Phase 1] TTL= 1  SYN sent  src_port=52127
+[Phase 1] TTL= 2  SYN sent  src_port=33573
+[Phase 1] TTL= 3  SYN sent  src_port=56531
+[Phase 1] TTL= 4  SYN sent  src_port=46557
+[Phase 1] TTL= 4  *** SYN-ACK received! hop_count=4 ***
+
+========== Phase 1 Summary ==========
+  hop_count (SYN-ACK TTL)          : 4
+  TCP SYN TTLs that got ICMP exceed : (none)
+  TCP max hop before target         : N/A
+==========
+
+[Phase 2] UDP TTL sweep TTL=1..3 toward 10.48.140.35 (IPv4)
+[Phase 2] TTL= 1  UDP sent  src_port=44072  payload="udp_probing_sweep_ttl_1"
+[Phase 2] TTL= 1  no ICMP response
+[Phase 2] TTL= 2  UDP sent  src_port=38900  payload="udp_probing_sweep_ttl_2"
+[Phase 2] TTL= 2  ICMP Time-Exceeded from 10.54.53.210  ✓
+[Phase 2] TTL= 3  UDP sent  src_port=42643  payload="udp_probing_sweep_ttl_3"
+[Phase 2] TTL= 3  ICMP Time-Exceeded from 10.48.129.26  ✓
+
+========== Phase 2 Summary ==========
+  UDP max hop before target (burst TTL): 3
+==========
+
+========== Combined Summary for 10.48.140.35 ==========
+  [TCP] max responding hop before target : N/A
+  [UDP] max responding hop before target : 3
+==========
+
+[Phase 2] Burst: 50 UDP pkts @ TTL=3 — sender+receiver pthreads
+          Rate: 50 pps (20000 µs interval)  payload=46 B UDP / ~74 B IPv4
+[Burst] # 1/50  TTL=3  sport=58559  sent  seq=1  size=46 B
+[Burst] # 2/50  TTL=3  sport=57272  sent  seq=2  size=46 B
+[Burst] # 1/50  RTT=29.003 ms  from 10.48.129.18  ✓
+[Burst] # 2/50  RTT=22.481 ms  from 10.48.129.26  ✓
+[Burst] # 3/50  TTL=3  sport=38779  sent  seq=3  size=46 B
+[Burst] # 4/50  TTL=3  sport=51975  sent  seq=4  size=46 B
+[Burst] # 3/50  RTT=28.972 ms  from 10.48.129.26  ✓
+[Burst] # 5/50  TTL=3  sport=43335  sent  seq=5  size=46 B
+[Burst] # 4/50  RTT=28.748 ms  from 10.48.129.18  ✓
+[Burst] # 5/50  RTT=23.654 ms  from 10.48.129.26  ✓
+[Burst] # 6/50  TTL=3  sport=57952  sent  seq=6  size=46 B
+[Burst] # 7/50  TTL=3  sport=52358  sent  seq=7  size=46 B
+[Burst] # 6/50  RTT=31.301 ms  from 10.48.129.18  ✓
+[Burst] # 8/50  TTL=3  sport=43093  sent  seq=8  size=46 B
+[Burst] # 7/50  RTT=26.530 ms  from 10.48.129.18  ✓
+[Burst] # 8/50  RTT=21.661 ms  from 10.48.129.26  ✓
+[Burst] # 9/50  TTL=3  sport=57347  sent  seq=9  size=46 B
+[Burst] #10/50  TTL=3  sport=41076  sent  seq=10  size=46 B
+[Burst] # 9/50  RTT=26.797 ms  from 10.48.129.26  ✓
+[Burst] #11/50  TTL=3  sport=37616  sent  seq=11  size=46 B
+[Burst] #10/50  RTT=24.271 ms  from 10.48.129.18  ✓
+[Burst] #11/50  RTT=18.005 ms  from 10.48.129.18  ✓
+[Burst] #12/50  TTL=3  sport=60309  sent  seq=12  size=46 B
+[Burst] #13/50  TTL=3  sport=45133  sent  seq=13  size=46 B
+[Burst] #12/50  RTT=27.877 ms  from 10.48.129.18  ✓
+[Burst] #14/50  TTL=3  sport=59837  sent  seq=14  size=46 B
+[Burst] #13/50  RTT=24.031 ms  from 10.48.129.26  ✓
+[Burst] #15/50  TTL=3  sport=55436  sent  seq=15  size=46 B
+[Burst] #14/50  RTT=28.833 ms  from 10.48.129.26  ✓
+[Burst] #16/50  TTL=3  sport=40346  sent  seq=16  size=46 B
+[Burst] #15/50  RTT=25.504 ms  from 10.48.129.18  ✓
+[Burst] #16/50  RTT=22.136 ms  from 10.48.129.26  ✓
+[Burst] #17/50  TTL=3  sport=37601  sent  seq=17  size=46 B
+[Burst] #18/50  TTL=3  sport=46782  sent  seq=18  size=46 B
+[Burst] #17/50  RTT=36.971 ms  from 10.48.129.26  ✓
+[Burst] #19/50  TTL=3  sport=46698  sent  seq=19  size=46 B
+[Burst] #18/50  RTT=24.453 ms  from 10.48.129.18  ✓
+[Burst] #19/50  RTT=21.969 ms  from 10.48.129.26  ✓
+[Burst] #20/50  TTL=3  sport=37840  sent  seq=20  size=46 B
+[Burst] #21/50  TTL=3  sport=56459  sent  seq=21  size=46 B
+[Burst] #20/50  RTT=29.711 ms  from 10.48.129.18  ✓
+[Burst] #22/50  TTL=3  sport=52626  sent  seq=22  size=46 B
+[Burst] #21/50  RTT=34.293 ms  from 10.48.129.18  ✓
+[Burst] #23/50  TTL=3  sport=36202  sent  seq=23  size=46 B
+[Burst] #22/50  RTT=30.940 ms  from 10.48.129.26  ✓
+[Burst] #24/50  TTL=3  sport=54251  sent  seq=24  size=46 B
+[Burst] #23/50  RTT=27.336 ms  from 10.48.129.18  ✓
+[Burst] #24/50  RTT=22.867 ms  from 10.48.129.18  ✓
+[Burst] #25/50  TTL=3  sport=48344  sent  seq=25  size=46 B
+[Burst] #26/50  TTL=3  sport=35589  sent  seq=26  size=46 B
+[Burst] #25/50  RTT=29.984 ms  from 10.48.129.26  ✓
+[Burst] #26/50  RTT=24.422 ms  from 10.48.129.26  ✓
+[Burst] #27/50  TTL=3  sport=53961  sent  seq=27  size=46 B
+[Burst] #28/50  TTL=3  sport=53023  sent  seq=28  size=46 B
+[Burst] #27/50  RTT=30.327 ms  from 10.48.129.18  ✓
+[Burst] #29/50  TTL=3  sport=35447  sent  seq=29  size=46 B
+[Burst] #28/50  RTT=24.870 ms  from 10.48.129.26  ✓
+[Burst] #30/50  TTL=3  sport=46015  sent  seq=30  size=46 B
+[Burst] #29/50  RTT=30.404 ms  from 10.48.129.26  ✓
+[Burst] #31/50  TTL=3  sport=37558  sent  seq=31  size=46 B
+[Burst] #30/50  RTT=27.119 ms  from 10.48.129.18  ✓
+[Burst] #31/50  RTT=21.371 ms  from 10.48.129.26  ✓
+[Burst] #32/50  TTL=3  sport=48016  sent  seq=32  size=46 B
+[Burst] #33/50  TTL=3  sport=43005  sent  seq=33  size=46 B
+[Burst] #32/50  RTT=29.048 ms  from 10.48.129.18  ✓
+[Burst] #34/50  TTL=3  sport=33032  sent  seq=34  size=46 B
+[Burst] #33/50  RTT=24.972 ms  from 10.48.129.26  ✓
+[Burst] #35/50  TTL=3  sport=46053  sent  seq=35  size=46 B
+[Burst] #34/50  RTT=30.983 ms  from 10.48.129.26  ✓
+[Burst] #36/50  TTL=3  sport=60089  sent  seq=36  size=46 B
+[Burst] #35/50  RTT=27.489 ms  from 10.48.129.26  ✓
+[Burst] #37/50  TTL=3  sport=49423  sent  seq=37  size=46 B
+[Burst] #36/50  RTT=24.711 ms  from 10.48.129.18  ✓
+[Burst] #38/50  TTL=3  sport=53969  sent  seq=38  size=46 B
+[Burst] #37/50  RTT=31.045 ms  from 10.48.129.26  ✓
+[Burst] #39/50  TTL=3  sport=44840  sent  seq=39  size=46 B
+[Burst] #38/50  RTT=29.860 ms  from 10.48.129.26  ✓
+[Burst] #40/50  TTL=3  sport=46300  sent  seq=40  size=46 B
+[Burst] #39/50  RTT=24.452 ms  from 10.48.129.18  ✓
+[Burst] #41/50  TTL=3  sport=34508  sent  seq=41  size=46 B
+[Burst] #40/50  RTT=31.155 ms  from 10.48.129.18  ✓
+[Burst] #42/50  TTL=3  sport=35248  sent  seq=42  size=46 B
+[Burst] #41/50  RTT=26.106 ms  from 10.48.129.18  ✓
+[Burst] #42/50  RTT=20.636 ms  from 10.48.129.18  ✓
+[Burst] #43/50  TTL=3  sport=50491  sent  seq=43  size=46 B
+[Burst] #44/50  TTL=3  sport=54671  sent  seq=44  size=46 B
+[Burst] #43/50  RTT=24.908 ms  from 10.48.129.18  ✓
+[Burst] #44/50  RTT=21.234 ms  from 10.48.129.26  ✓
+[Burst] #45/50  TTL=3  sport=49904  sent  seq=45  size=46 B
+[Burst] #46/50  TTL=3  sport=48566  sent  seq=46  size=46 B
+[Burst] #45/50  RTT=27.458 ms  from 10.48.129.18  ✓
+[Burst] #47/50  TTL=3  sport=59484  sent  seq=47  size=46 B
+[Burst] #46/50  RTT=25.900 ms  from 10.48.129.26  ✓
+[Burst] #48/50  TTL=3  sport=32904  sent  seq=48  size=46 B
+[Burst] #47/50  RTT=27.798 ms  from 10.48.129.18  ✓
+[Burst] #49/50  TTL=3  sport=58059  sent  seq=49  size=46 B
+[Burst] #48/50  RTT=24.520 ms  from 10.48.129.26  ✓
+[Burst] #50/50  TTL=3  sport=43183  sent  seq=50  size=46 B
+[Burst] #49/50  RTT=29.937 ms  from 10.48.129.18  ✓
+[Burst] #50/50  RTT=26.956 ms  from 10.48.129.26  ✓
+
+========== Burst RTT & Packet Loss Summary ==========
+  Burst TTL               : 3
+  Packets sent            : 50
+  Packets received (ICMP) : 50
+  Packet loss             : 0/50  (0.0%)
+  RTT min                 : 18.005 ms
+  RTT avg                 : 26.720 ms
+  RTT max                 : 36.971 ms
+  Jitter (mean |delta|)   : 5.111 ms
+==========
+[INFO] src IPv4 (getifaddrs): 7.34.96.140
+
+=== Probing P-CSCF: 10.48.204.35 ===
+
+[Phase 1] TCP SYN TTL sweep toward 10.48.204.35 (IPv4)
+[Phase 1] TTL= 1  SYN sent  src_port=55671
+[Phase 1] TTL= 2  SYN sent  src_port=44903
+[Phase 1] TTL= 3  SYN sent  src_port=37377
+[Phase 1] TTL= 4  SYN sent  src_port=58587
+[Phase 1] TTL= 5  SYN sent  src_port=59111
+[Phase 1] TTL= 5  *** SYN-ACK received! hop_count=5 ***
+
+========== Phase 1 Summary ==========
+  hop_count (SYN-ACK TTL)          : 5
+  TCP SYN TTLs that got ICMP exceed : (none)
+  TCP max hop before target         : N/A
+==========
+
+[Phase 2] UDP TTL sweep TTL=1..4 toward 10.48.204.35 (IPv4)
+[Phase 2] TTL= 1  UDP sent  src_port=44893  payload="udp_probing_sweep_ttl_1"
+[Phase 2] TTL= 1  no ICMP response
+[Phase 2] TTL= 2  UDP sent  src_port=56347  payload="udp_probing_sweep_ttl_2"
+[Phase 2] TTL= 2  ICMP Time-Exceeded from 10.54.53.210  ✓
+[Phase 2] TTL= 3  UDP sent  src_port=44147  payload="udp_probing_sweep_ttl_3"
+[Phase 2] TTL= 3  ICMP Time-Exceeded from 10.48.129.26  ✓
+[Phase 2] TTL= 4  UDP sent  src_port=56399  payload="udp_probing_sweep_ttl_4"
+[Phase 2] TTL= 4  ICMP Time-Exceeded from 10.48.193.246  ✓
+
+========== Phase 2 Summary ==========
+  UDP max hop before target (burst TTL): 4
+==========
+
+========== Combined Summary for 10.48.204.35 ==========
+  [TCP] max responding hop before target : N/A
+  [UDP] max responding hop before target : 4
+==========
+
+[Phase 2] Burst: 50 UDP pkts @ TTL=4 — sender+receiver pthreads
+          Rate: 50 pps (20000 µs interval)  payload=46 B UDP / ~74 B IPv4
+[Burst] # 1/50  TTL=4  sport=36581  sent  seq=1  size=46 B
+[Burst] # 1/50  RTT=18.135 ms  from 10.48.193.230  ✓
+[Burst] # 2/50  TTL=4  sport=39865  sent  seq=2  size=46 B
+[Burst] # 2/50  RTT=23.292 ms  from 10.48.193.246  ✓
+[Burst] # 3/50  TTL=4  sport=53257  sent  seq=3  size=46 B
+[Burst] # 4/50  TTL=4  sport=49576  sent  seq=4  size=46 B
+[Burst] # 3/50  RTT=31.217 ms  from 10.48.193.230  ✓
+[Burst] # 5/50  TTL=4  sport=56721  sent  seq=5  size=46 B
+[Burst] # 4/50  RTT=26.864 ms  from 10.48.193.246  ✓
+[Burst] # 5/50  RTT=23.964 ms  from 10.48.193.230  ✓
+[Burst] # 6/50  TTL=4  sport=38164  sent  seq=6  size=46 B
+[Burst] # 7/50  TTL=4  sport=42733  sent  seq=7  size=46 B
+[Burst] # 6/50  RTT=27.246 ms  from 10.48.193.246  ✓
+[Burst] # 7/50  RTT=24.474 ms  from 10.48.193.230  ✓
+[Burst] # 8/50  TTL=4  sport=47824  sent  seq=8  size=46 B
+[Burst] # 9/50  TTL=4  sport=49048  sent  seq=9  size=46 B
+[Burst] # 8/50  RTT=26.072 ms  from 10.48.193.246  ✓
+[Burst] #10/50  TTL=4  sport=40288  sent  seq=10  size=46 B
+[Burst] # 9/50  RTT=25.007 ms  from 10.48.193.230  ✓
+[Burst] #11/50  TTL=4  sport=37298  sent  seq=11  size=46 B
+[Burst] #10/50  RTT=38.240 ms  from 10.48.193.246  ✓
+[Burst] #11/50  RTT=17.099 ms  from 10.48.193.230  ✓
+[Burst] #12/50  TTL=4  sport=60295  sent  seq=12  size=46 B
+[Burst] #13/50  TTL=4  sport=50870  sent  seq=13  size=46 B
+[Burst] #12/50  RTT=24.728 ms  from 10.48.193.246  ✓
+[Burst] #14/50  TTL=4  sport=40919  sent  seq=14  size=46 B
+[Burst] #13/50  RTT=31.049 ms  from 10.48.193.230  ✓
+[Burst] #14/50  RTT=22.642 ms  from 10.48.193.246  ✓
+[Burst] #15/50  TTL=4  sport=33986  sent  seq=15  size=46 B
+[Burst] #16/50  TTL=4  sport=37339  sent  seq=16  size=46 B
+[Burst] #15/50  RTT=30.811 ms  from 10.48.193.246  ✓
+[Burst] #16/50  RTT=20.427 ms  from 10.48.193.246  ✓
+[Burst] #17/50  TTL=4  sport=53306  sent  seq=17  size=46 B
+[Burst] #17/50  RTT=22.241 ms  from 10.48.193.246  ✓
+[Burst] #18/50  TTL=4  sport=46984  sent  seq=18  size=46 B
+[Burst] #18/50  RTT=27.375 ms  from 10.48.193.246  ✓
+[Burst] #19/50  TTL=4  sport=34777  sent  seq=19  size=46 B
+[Burst] #19/50  RTT=22.123 ms  from 10.48.193.230  ✓
+[Burst] #20/50  TTL=4  sport=55576  sent  seq=20  size=46 B
+[Burst] #21/50  TTL=4  sport=60938  sent  seq=21  size=46 B
+[Burst] #20/50  RTT=26.141 ms  from 10.48.193.246  ✓
+[Burst] #21/50  RTT=23.209 ms  from 10.48.193.230  ✓
+[Burst] #22/50  TTL=4  sport=59396  sent  seq=22  size=46 B
+[Burst] #23/50  TTL=4  sport=60409  sent  seq=23  size=46 B
+[Burst] #22/50  RTT=28.983 ms  from 10.48.193.246  ✓
+[Burst] #23/50  RTT=25.271 ms  from 10.48.193.246  ✓
+[Burst] #24/50  TTL=4  sport=33648  sent  seq=24  size=46 B
+[Burst] #25/50  TTL=4  sport=43474  sent  seq=25  size=46 B
+[Burst] #24/50  RTT=32.183 ms  from 10.48.193.246  ✓
+[Burst] #25/50  RTT=24.793 ms  from 10.48.193.230  ✓
+[Burst] #26/50  TTL=4  sport=48390  sent  seq=26  size=46 B
+[Burst] #27/50  TTL=4  sport=60504  sent  seq=27  size=46 B
+[Burst] #26/50  RTT=29.352 ms  from 10.48.193.230  ✓
+[Burst] #28/50  TTL=4  sport=56021  sent  seq=28  size=46 B
+[Burst] #27/50  RTT=27.762 ms  from 10.48.193.230  ✓
+[Burst] #28/50  RTT=20.440 ms  from 10.48.193.230  ✓
+[Burst] #29/50  TTL=4  sport=45927  sent  seq=29  size=46 B
+[Burst] #30/50  TTL=4  sport=46606  sent  seq=30  size=46 B
+[Burst] #29/50  RTT=26.588 ms  from 10.48.193.230  ✓
+[Burst] #30/50  RTT=22.514 ms  from 10.48.193.230  ✓
+[Burst] #31/50  TTL=4  sport=42247  sent  seq=31  size=46 B
+[Burst] #31/50  RTT=25.770 ms  from 10.48.193.246  ✓
+[Burst] #32/50  TTL=4  sport=34663  sent  seq=32  size=46 B
+[Burst] #33/50  TTL=4  sport=46549  sent  seq=33  size=46 B
+[Burst] #32/50  RTT=31.494 ms  from 10.48.193.230  ✓
+[Burst] #33/50  RTT=25.650 ms  from 10.48.193.246  ✓
+[Burst] #34/50  TTL=4  sport=46217  sent  seq=34  size=46 B
+[Burst] #35/50  TTL=4  sport=33615  sent  seq=35  size=46 B
+[Burst] #34/50  RTT=29.237 ms  from 10.48.193.246  ✓
+[Burst] #36/50  TTL=4  sport=37470  sent  seq=36  size=46 B
+[Burst] #35/50  RTT=27.340 ms  from 10.48.193.230  ✓
+[Burst] #36/50  RTT=23.579 ms  from 10.48.193.230  ✓
+[Burst] #37/50  TTL=4  sport=53133  sent  seq=37  size=46 B
+[Burst] #38/50  TTL=4  sport=42995  sent  seq=38  size=46 B
+[Burst] #37/50  RTT=29.720 ms  from 10.48.193.246  ✓
+[Burst] #39/50  TTL=4  sport=47345  sent  seq=39  size=46 B
+[Burst] #38/50  RTT=26.143 ms  from 10.48.193.230  ✓
+[Burst] #39/50  RTT=23.153 ms  from 10.48.193.246  ✓
+[Burst] #40/50  TTL=4  sport=52879  sent  seq=40  size=46 B
+[Burst] #41/50  TTL=4  sport=57792  sent  seq=41  size=46 B
+[Burst] #40/50  RTT=29.138 ms  from 10.48.193.246  ✓
+[Burst] #42/50  TTL=4  sport=43034  sent  seq=42  size=46 B
+[Burst] #41/50  RTT=26.518 ms  from 10.48.193.246  ✓
+[Burst] #42/50  RTT=22.933 ms  from 10.48.193.230  ✓
+[Burst] #43/50  TTL=4  sport=38041  sent  seq=43  size=46 B
+[Burst] #43/50  RTT=18.421 ms  from 10.48.193.246  ✓
+[Burst] #44/50  TTL=4  sport=56837  sent  seq=44  size=46 B
+[Burst] #45/50  TTL=4  sport=54589  sent  seq=45  size=46 B
+[Burst] #44/50  RTT=30.992 ms  from 10.48.193.230  ✓
+[Burst] #45/50  RTT=22.555 ms  from 10.48.193.246  ✓
+[Burst] #46/50  TTL=4  sport=51511  sent  seq=46  size=46 B
+[Burst] #47/50  TTL=4  sport=53422  sent  seq=47  size=46 B
+[Burst] #46/50  RTT=31.481 ms  from 10.48.193.230  ✓
+[Burst] #48/50  TTL=4  sport=56901  sent  seq=48  size=46 B
+[Burst] #47/50  RTT=25.467 ms  from 10.48.193.230  ✓
+[Burst] #48/50  RTT=22.566 ms  from 10.48.193.246  ✓
+[Burst] #49/50  TTL=4  sport=33541  sent  seq=49  size=46 B
+[Burst] #50/50  TTL=4  sport=59047  sent  seq=50  size=46 B
+[Burst] #49/50  RTT=28.737 ms  from 10.48.193.246  ✓
+[Burst] #50/50  RTT=24.333 ms  from 10.48.193.230  ✓
+
+========== Burst RTT & Packet Loss Summary ==========
+  Burst TTL               : 4
+  Packets sent            : 50
+  Packets received (ICMP) : 50
+  Packet loss             : 0/50  (0.0%)
+  RTT min                 : 17.099 ms
+  RTT avg                 : 25.909 ms
+  RTT max                 : 38.240 ms
+  Jitter (mean |delta|)   : 5.589 ms
+==========
+
+[DONE]
